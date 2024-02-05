@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    background-color: #ccc;
+    color: #333;
+    font-size: 1.25rem;
+    margin: 10px;
+    padding: 30px;
+    text-align: left;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    min-height: 50vh;
+    max-width: 800px;
+    margin: 0px auto;
+    border: 8px dotted #888;
+}
+
+h1 {
+    margin-top: -5px;
+    padding-bottom: 1rem;
+    /* border-bottom: 3px solid #333; */
+    background-color: #de4318;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+b {
+    background-color: beige;
+    padding: 5px 10px;
+}

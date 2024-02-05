@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Terminal Commands</title>
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="images/git-github.png">
+        <h1>Git / GitHub Terminal Commands</h1>
+        <h2>Git is Version Control Software for Tracking Changes</h2>
+        <h3>GitHub is a Website where Git "repositories" are stored.</h3>
+        <h4>VSCode allows you to do all git/github commands by clicking buttons, but 
+            a professional web dev <em>must</em> know the terminal commands for same.
+            In fact, prior to Microsoft's aquisition of both GitHub and VSCode, 
+            developers <em>had</em> no alternative but to use the terminal for git.</h4>
+        <p><b>git init</b> makes a git repo in the current folder (working directory)</p>
+        <p><b>ls</b> shows contents of working directory, but does not show hidden items, such as the 
+            <b>.git</b> folder, which gets made when you type <b>git init</b></p>
+        <p><b>ls -s</b> shows <em>all</em> contents of working directory, including hidden <b>.git</b> folder</p>
+        <p><b>git status</b> shows all staged files (files ready to be committed)</p>
+        <p><b>git add file-name.ext</b> adds file-name.ext to staging area, ready to be committed</p>
+        <p><b>git add *</b> adds all files/folders to staging area, ready to be committed</p>
+        <p><b>git commit -m "first commit"</b> commits the staged files and includes commit message</p>
+        <p><b>git log</b> to get details of the commits, including messages and unique id's.</p>
+        <p>If you add more files to working directory and type <b>git status</b>, they will appear as untracked.</p>
+        <p><b>git checkout notes.txt</b> reverts to the last committed version of <b>notes.txt</b><br>
+            This is the ultimate "do over" move for when you irrevocably mess up a file and just want to go
+            back to how it was before.</p>
+
+        <h3>Pushing a Local Git Repo to Remote GitHub Repo</h3>
+        <p>These next steps require you to have first logging into github.com, 
+            making a new repo there, and copying the url.</p>
+        <p><b>git remote add origin https:github.com/MyGithubAcct/MyProjectFolder</b></p>
+
+
+
+
+
+
+    </div>
+
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
