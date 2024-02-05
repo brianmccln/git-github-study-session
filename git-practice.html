@@ -15,8 +15,11 @@
     <div class="container">
         <img src="images/git-github.png">
         <h1>Git / GitHub Terminal Commands</h1>
-        <h2>Git is Version Control Software for Tracking Changes</h2>
-        <h3>GitHub is a Website where Git "repositories" are stored.</h3>
+        <p>Git is Version Control Software for Tracking Changes</p>
+
+        <h2>Setting up a local Git repository ("repo")</h2>
+
+        <h4>GitHub is a Website where Git "repositories" are stored.</h4>
         <h4>VSCode allows you to do all git/github commands by clicking buttons, but 
             a professional web dev <em>must</em> know the terminal commands for same.
             In fact, prior to Microsoft's aquisition of both GitHub and VSCode, 
@@ -24,10 +27,17 @@
         <p><b>git init</b> makes a git repo in the current folder (working directory)</p>
         <p><b>ls</b> shows contents of working directory, but does not show hidden items, such as the 
             <b>.git</b> folder, which gets made when you type <b>git init</b></p>
-        <p><b>ls -s</b> shows <em>all</em> contents of working directory, including hidden <b>.git</b> folder</p>
+        <p><b>ls -a</b> shows <em>all</em> contents of working directory, including hidden <b>.git</b> folder</p>
+        <p><b>ls -R</b> show contents of all files, including those in all subfolders--but not hidden files/folders.</p>
+        <p><b>ls -a -R</b> show contents of all files, including hidden file and files in all subfolders</p>
         <p><b>git status</b> shows all staged files (files ready to be committed)</p>
         <p><b>git add file-name.ext</b> adds file-name.ext to staging area, ready to be committed</p>
-        <p><b>git add *</b> adds all files/folders to staging area, ready to be committed</p>
+        <p><b>git add .</b> adds all files/folders to staging area, ready to be committed</p>
+        <p><b>git add *</b> does the same as <b>git add .</b>, <em>but</em> without including hidden files or
+             folders, which start with a dot.</p>
+        <p><b>git rm --cached . -r</b> removes all items from staging area. <b>-r</b> means "recursively", which 
+        means that all items in subfolders are also removed. 
+        Then type <b>git status</b> to confirm that the files have been unstaged.</p>
         <p><b>git commit -m "first commit"</b> commits the staged files and includes commit message</p>
         <p><b>git log</b> to get details of the commits, including messages and unique id's.</p>
         <p>If you add more files to working directory and type <b>git status</b>, they will appear as untracked.</p>
@@ -35,10 +45,22 @@
             This is the ultimate "do over" move for when you irrevocably mess up a file and just want to go
             back to how it was before.</p>
 
-        <h3>Pushing a Local Git Repo to Remote GitHub Repo</h3>
+        <h2>Pushing a local git repo to github remote repo</h2>
+
         <p>These next steps require you to have first logging into github.com, 
             making a new repo there, and copying the url.</p>
         <p><b>git remote add origin https:github.com/MyGithubAcct/MyProjectFolder</b></p>
+        <p><b>git branch -M main</b> makes a <b>main</b> branch, providing a destination to push to.</p>
+        <p><b>git push -u origin main</b> pushes the local git repo to the remote github repo's <b>main</b> branch.</p>
+        <p><b>-u</b> flag creates a tracking reference for every branch that you successfully push onto the remote repository. 
+            The local branch you push is automatically linked with the remote branch. This allows you to use commands 
+            such as git pull without any arguments.</p>
+        <p><b>touch .gitignore</b> makes an invisible file for specifying files for git to ignore. These would be files with sensitive
+        information, such as passwords, or <b>.DS_Store</b> file. The file contains information about which files are in the folder 
+        and contains options such as what icons look like. For cybersecurity reasons, <b>.DS_Store</b> should <em>not</em> be uploaded to github.</p>
+        <p><b>ls -a</b> to see invisible files and folders--including <b>.gitignore</b></p>
+        <p><b>open .gitignore</b> to open the .gitignore file for editing in VSCode.</p>
+        <p>In <b>.gitignore</b> file, type the names of the file(s) to be ignored by git, one file name per line.</p>
 
 
 

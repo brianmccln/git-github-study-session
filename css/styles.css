@@ -24,6 +24,12 @@ h1 {
     background-color: #de4318;
     color: #fff;
     padding: 10px 20px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+
+h2 {
+    color: #de4318;
 }
 
 b {
